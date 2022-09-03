@@ -1,5 +1,5 @@
 # cpan-smoker-utils
-![Unit tests](https://github.com/glasswalk3r/cpan-smoker-util/actions/workflows/unit.yaml/badge.svg?branch=main)
+![Unit tests](https://github.com/glasswalk3r/cpan-smoker-utils/actions/workflows/unit.yaml/badge.svg?branch=main)
 
 Set of CLI's to manage a Perl CPAN smoker machine.
 
