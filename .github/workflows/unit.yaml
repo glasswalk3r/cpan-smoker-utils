@@ -10,11 +10,11 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - name: Installs dependencies with dzil
-        uses: jonasbn/github-action-perl-dist-zilla@0.2.0
+        uses: jonasbn/github-action-perl-dist-zilla@0.3.0
         with:
           dzil-arguments: install
       - name: Runs unit tests with dzil
-        uses: jonasbn/github-action-perl-dist-zilla@0.2.0
+        uses: jonasbn/github-action-perl-dist-zilla@0.3.0
         with:
           dzil-arguments: test
 
