@@ -29,15 +29,16 @@ The following programs are available under this distribution:
 
 =item *
 
-dblock: blocks a distribution to be tested in the smoker.
+C<dblock>: blocks a distribution to be tested in the smoker.
 
 =item *
 
-mirror_cleanup: further removes spurious files from a local CPAN mirror.
+C<mirror_cleanup>: further removes spurious files from a local CPAN mirror.
 
 =item *
 
-send_reports: send local stored tests results to a running metabase::relayd
+C<send_reports>: send local stored tests results to a running
+L<metabase::relayd>.
 
 =back
 
@@ -186,7 +187,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with CPAN Smoker Utils.  If not, see <http://www.gnu.org/licenses/>.
+along with CPAN Smoker Utils.  If not, see L<http://www.gnu.org/licenses/>.
 
 =cut
 

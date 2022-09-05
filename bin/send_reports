@@ -169,7 +169,8 @@ __END__
 
 =head1 send_reports
 
-send_reports - script to send CPAN::Reporter reports stored as files in a directory
+send_reports - script to send CPAN::Reporter reports stored as files in a
+directory
 
 =head1 SYNOPSIS
 
@@ -185,7 +186,7 @@ Print a brief help message and exits.
 
 =item B<--host>
 
-The hostname to where to send the reports. Optional, defaults to localhost.
+The hostname to where to send the reports. Optional, defaults to C<localhost>.
 
 =item B<--reports>
 
@@ -193,27 +194,32 @@ The complete path to the directory where the report files are located. Required.
 
 =item B<--port>
 
-The port number to metabase-relayd server. Optional, defaults to 8080.
+The port number to L<metabase-relayd> server. Optional, defaults to 8080.
 
 =item B<--grade>
 
-A grade filter to select which reports to send. See L<CPAN::Reporter> for grades definitions.
+A grade filter to select which reports to send. See L<CPAN::Reporter> for grades
+definitions.
 
 Only reports with the given grade will be sent: all others will be ignored.
 
-Any test file that corresponds to the grade passed as parameter will be sent through the metabase-relayd server.
+Any test file that corresponds to the grade passed as parameter will be sent
+through the L<metabase-relayd> server.
 
 =item B<--exclude>
 
-Same concept of C<--grade> option, but the inverse result: tests with the given grade will be ignore while all
-others will be sent through the metabase-relayd server.
+Same concept of C<--grade> option, but the inverse result: tests with the given
+grade will be ignore while all others will be sent through the
+L<metabase-relayd> server.
 
-One cannot set both C<--grade> and C<--exclude> options: trying to do that will make the program to abort execution.
+One cannot set both C<--grade> and C<--exclude> options: trying to do that will
+make the program to abort execution.
 
 =item B<--quiet>
 
-The program will not print anything to C<STDOUT> if this option is used. Only error messages will be sent to C<STDERR>, which in 
-case makes it useful to be used together with C<crontab>.
+The program will not print anything to C<STDOUT> if this option is used. Only
+error messages will be sent to C<STDERR>, which in case makes it useful to be
+used together with C<crontab>.
 
 =item B<--version>
 
@@ -223,29 +229,36 @@ Prints this program version and exits.
 
 =head1 DESCRIPTION
 
-send_reports is a Perl program to send offline CPAN Smoker tests to a L<metabase-relayd> server.
+C<send_reports> is a Perl program to send offline CPAN Smoker tests to a
+L<metabase-relayd> server.
 
-You can setup your CPAN Reporter to save the files to the filesystem instead sending it through HTTP/HTTPS directly. This have some advantages:
+You can setup your CPAN Reporter to save the files to the file system instead
+sending it through HTTP/HTTPS directly. This have some advantages:
 
 =over
 
 =item *
 
-You can review tests before actually sending them. This is useful for Smokers, for instance, when you're not yet sure if the configuration is correct.
+You can review tests before actually sending them. This is useful for Smokers,
+for instance, when you're not yet sure if the configuration is correct.
 
 =item *
 
-You can release the smoker very quickly when submitting a report. This usually is faster than sending through HTTP/HTTPS.
+You can release the smoker very quickly when submitting a report. This usually
+is faster than sending through HTTP/HTTPS.
 
 =item *
 
-You can selective report your tests. For instance, you might be unsure about sending tests with "unknown" grade, so you can just skip them with C<--exclude> 
+You can selective report your tests. For instance, you might be unsure about
+sending tests with "unknown" grade, so you can just skip them with C<--exclude>
 or C<--grade> command line options.
 
 =back
 
-This program requires that somewhere near your machine you have a L<metabase-relayd> server running. This script will use L<Test::Reporter::Transport::Socket> to
-send the reports. Reports are sent pretty quickly (depending on how busy is the metabase-relayd).
+This program requires that somewhere near your machine you have a
+L<metabase-relayd> server running. This script will use
+L<Test::Reporter::Transport::Socket> to send the reports. Reports are sent
+pretty quickly (depending on how busy is the L<metabase-relayd>).
 
 =head1 AUTHOR
 
@@ -253,21 +266,22 @@ Alceu Rodrigues de Freitas Junior, E<lt>arfreitas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2017 of Alceu Rodrigues de Freitas Junior, arfreitas@cpan.org
+This software is copyright (c) 2017 of Alceu Rodrigues de Freitas Junior,
+arfreitas@cpan.org
 
-This file is part of CPAN OpenBSD Smoker.
+This file is part of CPAN Smoker Utils.
 
-CPAN OpenBSD Smoker is free software: you can redistribute it and/or modify
+CPAN Smoker Utils is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-CPAN OpenBSD Smoker is distributed in the hope that it will be useful,
+CPAN Smoker Utils is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with CPAN OpenBSD Smoker.  If not, see <http://www.gnu.org/licenses/>.
+along with CPAN Smoker Utils.  If not, see L<http://www.gnu.org/licenses/>.
 
 =cut

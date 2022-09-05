@@ -118,25 +118,33 @@ Prints the version number and exits.
 
 =head1 DESCRIPTION
 
-The main objective of this program is to reduce the size of storage required to have a L<CPAN> local repository.
+The main objective of this program is to reduce the size of storage required to
+have a L<CPAN> local repository.
 
-This program assumes that the same user that has a mirror setup with L<CPAN::Mini> is running it.
+This program assumes that the same user that has a mirror setup with
+L<CPAN::Mini> is running it.
 
-Also, it expects that the user has the L<CPAN> client configured to use a SQLite backend.
+Also, it expects that the user has the L<CPAN> client configured to use a SQLite
+backend.
 
-It will run over all the distributions available on the database, and check the corresponding directories on the mirror
-(right now hardcoded to C</minicpan/authors/id/> but may change in the future): if there is any tarball that is not 
-listed as the most current distribution for an author, it will be removed.
+It will run over all the distributions available on the database, and check the
+corresponding directories on the mirror (right now hard coded to
+C</minicpan/authors/id/> but may change in the future): if there is any tarball
+that is not listed as the most current distribution for an author, it will be
+removed.
 
-At this moment, it is unclear why those older distribution are still available, but when it does it is not for any particular distribution. It might be a
+At this moment, it is unclear why those older distribution are still available,
+but when it does it is not for any particular distribution. It might be a
 problem with the mirror itself.
 
-Nevertheless, since the mirror is intended to be used for L<CPAN::Reporter::Smoker> and that only the most recent distribution
-matters, it will release some storage space.
+Nevertheless, since the mirror is intended to be used for
+L<CPAN::Reporter::Smoker> and that only the most recent distribution matters, it
+will release some storage space.
 
 =head1 CAVEATS
 
-This program should be considered experimental, may be there unknown side effects.
+This program should be considered experimental, may be there unknown side
+effects.
 
 =head1 AUTHOR
 
@@ -144,21 +152,22 @@ Alceu Rodrigues de Freitas Junior, E<lt>arfreitas@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2017 of Alceu Rodrigues de Freitas Junior, arfreitas@cpan.org
+This software is copyright (c) 2017 of Alceu Rodrigues de Freitas Junior,
+arfreitas@cpan.org
 
-This file is part of CPAN OpenBSD Smoker.
+This file is part of CPAN Smoker Utils.
 
-CPAN OpenBSD Smoker is free software: you can redistribute it and/or modify
+CPAN Smoker Utils is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
 (at your option) any later version.
 
-CPAN OpenBSD Smoker is distributed in the hope that it will be useful,
+CPAN Smoker Utils is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with CPAN OpenBSD Smoker.  If not, see <http://www.gnu.org/licenses/>.
+along with CPAN Smoker Utils.  If not, see L<http://www.gnu.org/licenses/>.
 
 =cut
