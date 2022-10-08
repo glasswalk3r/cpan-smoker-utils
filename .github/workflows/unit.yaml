@@ -9,12 +9,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-      - name: Installs dependencies with dzil
+      - name: Installing dependencies and testing all using dzil
         uses: jonasbn/github-action-perl-dist-zilla@0.3.0
         with:
-          dzil-arguments: install
-      - name: Runs unit tests with dzil
-        uses: jonasbn/github-action-perl-dist-zilla@0.3.0
-        with:
-          dzil-arguments: test
+          dzil-arguments: 'test --all'
 
